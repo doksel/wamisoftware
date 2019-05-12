@@ -24,3 +24,10 @@ a, a:hover, a:focus, a:active{
   padding: 0 15px;
   margin: 0 auto;
 }
+
+.main{
+  text-align: center;
+  margin: 100px;
+  font-size: 30px;
+  font-weight: 700;
+}

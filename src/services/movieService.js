@@ -11,7 +11,7 @@ const moviesList = [
             movieId: 1,
             title: 'Fancy',
             url: 'https://www.youtube.com/embed/kOHB85vDuow?rel=0&autoplay=1&mute=1',
-            image: 'https://i.ebayimg.com/images/g/0MAAAOSwShtcq~h2/s-l300.jpg'
+            image: 'http://gold-song.ru/uploads/posts/2016-12/1481368407_my-music-kiosk.ru.jpg'
         },
         {
             movieId: 2,
