@@ -4,18 +4,14 @@ import { NavLink } from "react-router-dom";
 import SearchMovie from "../search/search";
 
 import { connect } from 'react-redux';
-import { getMoviesList, getMovie }  from '../../../actions/movieAction';
-
+import { getMoviesList, getMovieSearch }  from '../../../actions/movieAction';
 
 class MovieList extends Component {
 
-    showMovie = (e) => {
-        e.preventDefault();
+    showMovie = () => {
         const input = document.querySelector('#search_movie');
         if(input){
-            let movie = this.props.movieList.find(currentValue => currentValue.title === input.value)
-            this.props.getMovie(movie.movieId);
-            window.location.href += `/${movie.movieId}`;
+            this.props.getMovieSearch(input.value.trim().toLowerCase());            
         }
     }
 
@@ -24,9 +20,10 @@ class MovieList extends Component {
     }
     render() {
         const movieList = this.props.movieList;
+        const movieSearch = this.props.movieSearch;
         return(
             <div className="container">
-                <SearchMovie showMovie={this.showMovie}/>
+                <SearchMovie showMovie={this.showMovie} movieId={movieSearch?movieSearch.movieId:null}/>
                 <div className={style.movies}>
                     <h1>Movies</h1>
                     <div className={style.movies_list}>
@@ -48,14 +45,14 @@ class MovieList extends Component {
 const mapStateToProps = state => {
     return {
         movieList: state.movieReducer.movieList,
-        movie: state.movieReducer.movi,
+        movieSearch: state.movieReducer.movie,
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
         getMoviesList: () => dispatch(getMoviesList()),
-        getMovie: (movieId) => dispatch(getMovie(movieId)),
+        getMovieSearch: (title) => dispatch(getMovieSearch(title)),
     };
 };
 

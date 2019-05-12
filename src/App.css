@@ -16,7 +16,6 @@ body {
 a, a:hover, a:focus, a:active{
   color: initial;
   text-decoration: none;
-  display: block;
 }
 
 .container{

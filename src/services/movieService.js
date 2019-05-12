@@ -79,6 +79,6 @@ export const getMovieDb = (movieId) => {
 }
 
 export const getMovieSearchDb = (title) => {
-    let movie = moviesList.find(currentValue => currentValue.movieId === title);
+    let movie = moviesList.find(currentValue => currentValue.title.toLowerCase() == title);
     return movie;
 }

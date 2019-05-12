@@ -1,4 +1,4 @@
-import {getMoviesListDb, getMovieDb} from '../services/movieService';
+import {getMoviesListDb, getMovieDb, getMovieSearchDb} from '../services/movieService';
 
 // ======== ACTION_CREATORS
 export const getMoviesListSuccess = (movieList) => {
@@ -22,6 +22,12 @@ export const getMoviesList = () => {
 export const getMovie = (movieId) => {
     return (dispatch) => {
         const movie = getMovieDb(movieId);
+        dispatch(getMovieSuccess(movie))
+    }
+}
+export const getMovieSearch = (title) => {
+    return (dispatch) => {
+        const movie = getMovieSearchDb(title);
         dispatch(getMovieSuccess(movie))
     }
 }

@@ -1,6 +1,8 @@
 form{
     margin: 20px auto;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 input{
@@ -8,7 +10,12 @@ input{
     height: 40px;
 }
 
-button{
+.button, .button:active{
+    width: 100px;
     height: 40px;
-    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px gray;
+    background: gray;
 }
