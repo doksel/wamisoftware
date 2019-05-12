@@ -1,0 +1,33 @@
+.header {
+    background-color: #282c34;
+    height: 100px;
+    color: white;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    text-align: center;
+}
+
+.logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 40px;
+    width: 40px;
+}
+
+.link{
+    color: #fff;
+}
+
+.link:hover, .link:active{
+    color: #7ad8e9;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,14 @@
+form{
+    margin: 20px auto;
+    text-align: center;
+}
+
+input{
+    width: 200px;
+    height: 40px;
+}
+
+button{
+    height: 40px;
+    padding: 0 20px;
+}
