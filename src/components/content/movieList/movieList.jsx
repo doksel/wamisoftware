@@ -17,7 +17,6 @@ class MovieList extends Component {
             this.props.getMovie(movie.movieId);
             window.location.href += `/${movie.movieId}`;
         }
-        return `movie/1`;
     }
 
     componentWillMount() {
